@@ -10,48 +10,54 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html>
   <head>
     <title>icon-transition</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    
-    <script src="../platform/platform.js"></script>
-    
-    <link rel="import" href="icon-transition.html">
-    
-    <style>
 
+    <script src="../platform/platform.js"></script>
+
+    <link rel="import" href="icon-transition.html">
+    <link rel="import" href="../core-toolbar/core-toolbar.html">
+
+    <style>
       html, body {
         height: 100%;
       }
-    
+
       body {
         font-family: sans-serif;
         color: #FFF;
         margin: 0;
       }
-      
+
     </style>
-    
   </head>
-  
+
   <body unresolved>
-  
+
     <polymer-element name="shifter-demo" attributes="shape" touch-action="none">
     <template>
       <style>
         #hero {
           display: block;
-          margin: 30px auto;
-          width: 300px;
-          height: 300px;
         }
         icon-transition {
           display: inline-block;
         }
+        core-toolbar {
+          background-color: #009688;
+        }
       </style>
       <div>
-        <icon-transition id="hero" shape="{{ shape }}"></icon-transition>
+
+        <core-toolbar>
+          <icon-transition color="#fff" id="hero" shape="{{ shape }}"></icon-transition>
+          <span flex>Toolbar</span>
+          <core-icon-button icon="refresh"></core-icon-button>
+          <core-icon-button icon="add"></core-icon-button>
+        </core-toolbar>
+
         <icon-transition on-mouseover="{{ pickShape }}" shape="plus" ></icon-transition>
         <icon-transition on-mouseover="{{ pickShape }}" shape="cancel" ></icon-transition>
         <icon-transition on-mouseover="{{ pickShape }}" shape="check" ></icon-transition>
@@ -73,6 +79,5 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </script>
     </polymer-element>
     <shifter-demo id='demo'></shifter-demo>
-    
   </body>
 </html>
