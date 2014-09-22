@@ -6,8 +6,6 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
-
-/* line 4, icon-transition.scss */
 :host {
   display: inline-block;
   width: 30px;
@@ -16,13 +14,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   line-height: 0;
 }
 
-/* line 12, icon-transition.scss */
 svg {
   width: 100%;
   height: 100%;
 }
 
-/* line 17, icon-transition.scss */
 line {
   stroke-width: 6;
   -webkit-transition: -webkit-transform 0.5s;
@@ -36,7 +32,6 @@ line {
   transform: translate(0, 0) scale(0.01);
 }
 
-/* line 23, icon-transition.scss */
 .plus line:nth-child(1) {
   -webkit-transform: translate(0, 0) scale(12, 1);
   -moz-transform: translate(0, 0) scale(12, 1);
@@ -45,7 +40,6 @@ line {
   transform: translate(0, 0) scale(12, 1);
 }
 
-/* line 27, icon-transition.scss */
 .plus line:nth-child(3) {
   -webkit-transform: translate(0, 0) rotate(90deg) scale(12, 1);
   -moz-transform: translate(0, 0) rotate(90deg) scale(12, 1);
@@ -54,7 +48,6 @@ line {
   transform: translate(0, 0) rotate(90deg) scale(12, 1);
 }
 
-/* line 31, icon-transition.scss */
 .cancel line:nth-child(1) {
   -webkit-transform: translate(0, 0) rotate(135deg) scale(12, 1);
   -moz-transform: translate(0, 0) rotate(135deg) scale(12, 1);
@@ -63,7 +56,6 @@ line {
   transform: translate(0, 0) rotate(135deg) scale(12, 1);
 }
 
-/* line 35, icon-transition.scss */
 .cancel line:nth-child(3) {
   -webkit-transform: translate(0, 0) rotate(-135deg) scale(12, 1);
   -moz-transform: translate(0, 0) rotate(-135deg) scale(12, 1);
@@ -72,7 +64,6 @@ line {
   transform: translate(0, 0) rotate(-135deg) scale(12, 1);
 }
 
-/* line 39, icon-transition.scss */
 .check line:nth-child(1) {
   -webkit-transform: translate(-24.7px, 10.5px) rotate(45deg) scale(6, 1);
   -moz-transform: translate(-24.7px, 10.5px) rotate(45deg) scale(6, 1);
@@ -81,7 +72,6 @@ line {
   transform: translate(-24.7px, 10.5px) rotate(45deg) scale(6, 1);
 }
 
-/* line 43, icon-transition.scss */
 .check line:nth-child(3) {
   -webkit-transform: translate(11.5px, 0) rotate(-45deg) scale(12, 1);
   -moz-transform: translate(11.5px, 0) rotate(-45deg) scale(12, 1);
@@ -90,7 +80,6 @@ line {
   transform: translate(11.5px, 0) rotate(-45deg) scale(12, 1);
 }
 
-/* line 47, icon-transition.scss */
 .menu line:nth-child(1) {
   -webkit-transform: translate(0, -23px) scale(12, 1);
   -moz-transform: translate(0, -23px) scale(12, 1);
@@ -99,7 +88,6 @@ line {
   transform: translate(0, -23px) scale(12, 1);
 }
 
-/* line 51, icon-transition.scss */
 .menu line:nth-child(2) {
   -webkit-transform: translate(0, 0) scale(12, 1);
   -moz-transform: translate(0, 0) scale(12, 1);
@@ -108,7 +96,6 @@ line {
   transform: translate(0, 0) scale(12, 1);
 }
 
-/* line 55, icon-transition.scss */
 .menu line:nth-child(3) {
   -webkit-transform: translate(0, 23px) scale(12, 1);
   -moz-transform: translate(0, 23px) scale(12, 1);
@@ -117,7 +104,6 @@ line {
   transform: translate(0, 23px) scale(12, 1);
 }
 
-/* line 59, icon-transition.scss */
 .more line:nth-child(1) {
   -webkit-transform: translate(-26px, 0) scale(2, 2);
   -moz-transform: translate(-26px, 0) scale(2, 2);
@@ -126,7 +112,6 @@ line {
   transform: translate(-26px, 0) scale(2, 2);
 }
 
-/* line 63, icon-transition.scss */
 .more line:nth-child(2) {
   -webkit-transform: translate(0, 0) scale(2, 2);
   -moz-transform: translate(0, 0) scale(2, 2);
@@ -135,7 +120,6 @@ line {
   transform: translate(0, 0) scale(2, 2);
 }
 
-/* line 67, icon-transition.scss */
 .more line:nth-child(3) {
   -webkit-transform: translate(26px, 0) scale(2, 2);
   -moz-transform: translate(26px, 0) scale(2, 2);
@@ -144,7 +128,6 @@ line {
   transform: translate(26px, 0) scale(2, 2);
 }
 
-/* line 71, icon-transition.scss */
 .right line:nth-child(1) {
   -webkit-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
   -moz-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
@@ -153,7 +136,6 @@ line {
   transform: translate(0, -17px) rotate(45deg) scale(9, 1);
 }
 
-/* line 75, icon-transition.scss */
 .right line:nth-child(3) {
   -webkit-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
   -moz-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
@@ -162,7 +144,6 @@ line {
   transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
 }
 
-/* line 79, icon-transition.scss */
 .left line:nth-child(1) {
   -webkit-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
   -moz-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
@@ -171,7 +152,6 @@ line {
   transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
 }
 
-/* line 83, icon-transition.scss */
 .left line:nth-child(3) {
   -webkit-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
   -moz-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
@@ -180,7 +160,6 @@ line {
   transform: translate(0, 17px) rotate(45deg) scale(9, 1);
 }
 
-/* line 87, icon-transition.scss */
 .up line:nth-child(1) {
   -webkit-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
   -moz-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
@@ -189,7 +168,6 @@ line {
   transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
 }
 
-/* line 91, icon-transition.scss */
 .up line:nth-child(3) {
   -webkit-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
   -moz-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
@@ -198,7 +176,6 @@ line {
   transform: translate(17px, 0) rotate(45deg) scale(9, 1);
 }
 
-/* line 95, icon-transition.scss */
 .down line:nth-child(1) {
   -webkit-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
   -moz-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
@@ -207,7 +184,6 @@ line {
   transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
 }
 
-/* line 99, icon-transition.scss */
 .down line:nth-child(3) {
   -webkit-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
   -moz-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
