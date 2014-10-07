@@ -19,6 +19,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <link rel="import" href="icon-transition.html">
     <link rel="import" href="../core-toolbar/core-toolbar.html">
+    <link rel="import" href="../paper-button/paper-button.html">
 
     <style>
       html, body {
@@ -27,26 +28,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       body {
         font-family: sans-serif;
-        color: #FFF;
         margin: 0;
       }
-
     </style>
   </head>
 
   <body unresolved>
 
-    <polymer-element name="shifter-demo" attributes="shape" touch-action="none">
+    <polymer-element name="shape-demo" attributes="shape" touch-action="none">
     <template>
       <style>
         #hero {
           display: block;
+          padding: 20px;
         }
+        
         icon-transition {
           display: inline-block;
         }
+
         core-toolbar {
+          color: #fff;
           background-color: #009688;
+        }
+
+        paper-button {
+          color: #4285f4;
+        }
+
+        h2 {
+          color: #666;
+        }
+
+        main {
+          margin: 20px;
         }
       </style>
       <div>
@@ -58,26 +73,44 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <core-icon-button icon="add"></core-icon-button>
         </core-toolbar>
 
-        <icon-transition on-mouseover="{{ pickShape }}" shape="plus" ></icon-transition>
-        <icon-transition on-mouseover="{{ pickShape }}" shape="cancel" ></icon-transition>
-        <icon-transition on-mouseover="{{ pickShape }}" shape="check" ></icon-transition>
-        <icon-transition on-mouseover="{{ pickShape }}" shape="menu" ></icon-transition>
-        <icon-transition on-mouseover="{{ pickShape }}" shape="more" ></icon-transition>
-        <icon-transition on-mouseover="{{ pickShape }}" shape="right" ></icon-transition>
-        <icon-transition on-mouseover="{{ pickShape }}" shape="left" ></icon-transition>
-        <icon-transition on-mouseover="{{ pickShape }}" shape="up" ></icon-transition>
-        <icon-transition on-mouseover="{{ pickShape }}" shape="down" ></icon-transition>
+        <main>
+          <h2>Transition icon on click</h2>
+          <paper-button on-tap="{{triggerTransition}}" data-shape="menu">Switch to menu</paper-button>
+          <paper-button on-tap="{{triggerTransition}}" data-shape="more">Switch to more</paper-button>
+          <paper-button on-tap="{{triggerTransition}}" data-shape="check">Switch to check</paper-button>
+          <paper-button on-tap="{{triggerTransition}}" data-shape="cancel">Switch to cancel</paper-button>
+
+          <h2>Transition icon on hover</h2>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="plus" ></icon-transition>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="cancel" ></icon-transition>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="check" ></icon-transition>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="menu" ></icon-transition>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="more" ></icon-transition>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="right" ></icon-transition>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="left" ></icon-transition>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="up" ></icon-transition>
+          <icon-transition on-mouseover="{{ pickShape }}" shape="down" ></icon-transition>
+
+          <p>A prototype of Material Design <a href="http://www.google.com/design/spec/animation/delightful-details.html#delightful-details-delightful-details">delightful details</a>.</p>
+        </main>
+
       </div>
     </template>
     <script>
-      Polymer('shifter-demo', {
+      Polymer('shape-demo', {
         shape: 'plus',
         pickShape: function(e, target, sender) {
           this.shape = sender.shape;
+        },
+        triggerTransition: function(e, target, sender) {
+          var shape = sender.attributes['data-shape'].value;
+          if (!!shape) {
+            this.shape = shape;
+          }
         }
       });
     </script>
     </polymer-element>
-    <shifter-demo id='demo'></shifter-demo>
+    <shape-demo id='demo'></shape-demo>
   </body>
 </html>
