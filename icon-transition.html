@@ -35,7 +35,7 @@ In the above example, we have two `<icon-transition>` icons whose transitions ar
 <polymer-element name="icon-transition" attributes="shape color" assetpath="src/">
     <template>
         <link rel="stylesheet" href="icon-transition.css">
-        <svg class="{{ shape }}" viewbox="0 0 100 100" stroke="{{ color }}">
+        <svg id="svg" viewbox="0 0 100 100" stroke="{{ color }}">
             <g transform="translate(50, 50)">
                 <line x1="-3" y1="0" x2="3" y2="0"></line>
                 <line x1="-3" y1="0" x2="3" y2="0"></line>
@@ -51,8 +51,27 @@ In the above example, we have two `<icon-transition>` icons whose transitions ar
              * @attribute color
              * @type string
              * @default #000
-             */            
-            color: "#000"
+             */
+            color: "#000",
+
+            _rotate: 0,
+
+            shapeChanged: function() {
+              this._rotate += 180;
+
+              var cl = this.shape;
+              if ((this._rotate % 360) == 180) {
+                cl += " rotate";
+              }
+              this.$.svg.setAttribute('class', cl);
+
+              var transform = "rotate(" + this._rotate + "deg)";
+              if (document.documentElement.style.transform !== undefined) {
+                this.$.svg.style.transform = transform;
+              } else {
+                this.$.svg.style.webkitTransform = transform;
+              }
+            }
         });
     </script>
 </polymer-element>
