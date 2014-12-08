@@ -1,0 +1,77 @@
+<!--
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<!--
+`icon-transition` is an element allowing line-based SVG icons to seamlessly change from one to the other. It provides an implementation of Material Design's [delightful details](http://www.google.com/design/spec/animation/delightful-details.html) transitions.
+
+Example:
+
+    <icon-transition id="icon1" on-mouseover="{{ pickShape }}" shape="plus" ></icon-transition>
+    <icon-transition id="icon2" on-mouseover="{{ pickShape }}" shape="check" ></icon-transition>
+
+    <script>
+      Polymer('transition-demo', {
+        pickShape: function(e, target, sender) {
+          this.shape = sender.shape;
+        }
+      });
+    </script>
+
+In the above example, we have two `<icon-transition>` icons whose transitions are specified in CSS. Hovering over the icon triggers a transition from one shape to the next.
+
+@group Polymer Labs Elements
+@element icon-transition
+@homepage github.io
+@contributors Tom Wiltzius, Addy Osmani
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+<polymer-element name="icon-transition" attributes="shape color" assetpath="src/">
+    <template>
+        <link rel="stylesheet" href="icon-transition.css">
+        <svg id="svg" viewbox="0 0 100 100" stroke="{{ color }}">
+            <g transform="translate(50, 50)">
+                <line x1="-3" y1="0" x2="3" y2="0"></line>
+                <line x1="-3" y1="0" x2="3" y2="0"></line>
+                <line x1="-3" y1="0" x2="3" y2="0"></line>
+            </g>
+        </svg>
+    </template>
+    <script>
+        Polymer("icon-transition", {
+            /**
+             * Specify the stroke color of the current SVG icon
+             *
+             * @attribute color
+             * @type string
+             * @default #000
+             */
+            color: "#000",
+
+            _rotate: 0,
+
+            shapeChanged: function() {
+              this._rotate += 180;
+
+              var cl = this.shape;
+              if ((this._rotate % 360) == 180) {
+                cl += " rotate";
+              }
+              this.$.svg.setAttribute('class', cl);
+
+              var transform = "rotate(" + this._rotate + "deg)";
+              if (document.documentElement.style.transform !== undefined) {
+                this.$.svg.style.transform = transform;
+              } else {
+                this.$.svg.style.webkitTransform = transform;
+              }
+            }
+        });
+    </script>
+</polymer-element>

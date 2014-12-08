@@ -1,0 +1,8 @@
+{
+  "name": "icon-transition",
+  "dependencies": {
+  	"polymer": "Polymer/polymer#^0.5.1",
+  	"core-toolbar": "Polymer/core-toolbar#>=0.4.0 <1.0.0",
+  	"paper-button": "Polymer/paper-button#>=0.4.0 <1.0.0"
+  }
+}

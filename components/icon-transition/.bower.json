@@ -1,0 +1,19 @@
+{
+  "name": "icon-transition",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5.1",
+    "core-toolbar": "Polymer/core-toolbar#>=0.4.0 <1.0.0",
+    "paper-button": "Polymer/paper-button#>=0.4.0 <1.0.0"
+  },
+  "homepage": "https://github.com/PolymerLabs/icon-transition",
+  "_release": "8668ce0fca",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8668ce0fcac5c475ac22f6b838a0ed5eb3efcdbf"
+  },
+  "_source": "git://github.com/PolymerLabs/icon-transition.git",
+  "_target": "master",
+  "_originalSource": "PolymerLabs/icon-transition",
+  "_direct": true
+}

@@ -1,0 +1,7 @@
+{
+  "name": "icon-transition#gh-pages",
+  "private": true,
+  "dependencies": {
+    "icon-transition": "PolymerLabs/icon-transition#master"
+  }
+}
