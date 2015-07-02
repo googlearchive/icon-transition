@@ -1,8 +1,11 @@
 {
   "name": "icon-transition",
   "dependencies": {
-  	"polymer": "Polymer/polymer#^0.5.1",
-  	"core-toolbar": "Polymer/core-toolbar#>=0.4.0 <1.0.0",
-  	"paper-button": "Polymer/paper-button#>=0.4.0 <1.0.0"
+    "polymer": "^1.0.5",
+    "paper-toolbar": "PolymerElements/paper-toolbar#1.0.2",
+    "paper-button": "PolymerElements/paper-button#^1.0.2"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0"
   }
 }

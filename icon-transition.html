@@ -12,13 +12,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 Example:
 
-    <icon-transition id="icon1" on-mouseover="{{ pickShape }}" shape="plus" ></icon-transition>
-    <icon-transition id="icon2" on-mouseover="{{ pickShape }}" shape="check" ></icon-transition>
+    <icon-transition id="icon1" on-mouseover="pickShape" shape="plus" ></icon-transition>
+    <icon-transition id="icon2" on-mouseover="pickShape" shape="check" ></icon-transition>
 
     <script>
-      Polymer('transition-demo', {
-        pickShape: function(e, target, sender) {
-          this.shape = sender.shape;
+      Polymer({
+        is: 'transition-demo',
+        pickShape: function(e) {
+          this.shape = e.currentTarget.shape;
         }
       });
     </script>
@@ -28,14 +29,15 @@ In the above example, we have two `<icon-transition>` icons whose transitions ar
 @group Polymer Labs Elements
 @element icon-transition
 @homepage github.io
-@contributors Tom Wiltzius, Addy Osmani
+@contributors Tom Wiltzius, Addy Osmani, Nicholas Albion
 -->
 
-<link rel="import" href="../polymer/polymer.html">
-<polymer-element name="icon-transition" attributes="shape color" assetpath="src/">
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="icon-transition">
+    <link rel="stylesheet" href="icon-transition.css">
     <template>
-        <link rel="stylesheet" href="icon-transition.css">
-        <svg id="svg" viewbox="0 0 100 100" stroke="{{ color }}">
+        <svg id="svg" viewbox="0 0 100 100" stroke$="{{color}}">
             <g transform="translate(50, 50)">
                 <line x1="-3" y1="0" x2="3" y2="0"></line>
                 <line x1="-3" y1="0" x2="3" y2="0"></line>
@@ -44,34 +46,39 @@ In the above example, we have two `<icon-transition>` icons whose transitions ar
         </svg>
     </template>
     <script>
-        Polymer("icon-transition", {
-            /**
-             * Specify the stroke color of the current SVG icon
-             *
-             * @attribute color
-             * @type string
-             * @default #000
-             */
-            color: "#000",
+        Polymer({
+            is: 'icon-transition',
 
-            _rotate: 0,
+            properties: {
+                /** Specify the stroke color of the current SVG icon */
+                _rotate: 0,
+                color: {
+                    type: String,
+                    value: '#000'
+                },
+                shape: {
+                    type: String,
+                    observer: 'shapeChanged'
+                }
+            },
 
             shapeChanged: function() {
-              this._rotate += 180;
+                this._rotate += 180;
 
-              var cl = this.shape;
-              if ((this._rotate % 360) == 180) {
-                cl += " rotate";
-              }
-              this.$.svg.setAttribute('class', cl);
+                var cl = this.shape;
+                if ((this._rotate % 360) == 180) {
+                    cl += ' rotate';
+                }
+                var svg = this.$.svg; // Polymer.dom(this.$.svg);
+                svg.setAttribute('class', cl);
 
-              var transform = "rotate(" + this._rotate + "deg)";
-              if (document.documentElement.style.transform !== undefined) {
-                this.$.svg.style.transform = transform;
-              } else {
-                this.$.svg.style.webkitTransform = transform;
-              }
+                var transform = 'rotate(' + this._rotate + 'deg)';
+                if (document.documentElement.style.transform !== undefined) {
+                    svg.style.transform = transform;
+                } else {
+                    svg.style.webkitTransform = transform;
+                }
             }
         });
     </script>
-</polymer-element>
+</dom-module>
