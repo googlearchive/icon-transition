@@ -1,5 +1,6 @@
 {
   "name": "icon-transition",
+  "version": "1.0.0",
   "dependencies": {
     "polymer": "^1.0.5",
     "paper-toolbar": "PolymerElements/paper-toolbar#1.0.2",
