@@ -34,7 +34,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 
 <body unresolved>
-<dom-module id="shape-demo">
+<dom-module id="icon-demo">
     <style>
         #hero {
             display: block;
@@ -65,7 +65,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <template>
         <div>
             <paper-toolbar>
-                <icon-transition color="#fff" id="hero" shape="{{shape}}"></icon-transition>
+                <icon-transition color="#fff" id="hero" icon="{{icon}}"></icon-transition>
                 <span flex>Toolbar</span>
                 <paper-icon-button icon="refresh"></paper-icon-button>
                 <paper-icon-button icon="add"></paper-icon-button>
@@ -73,25 +73,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             <main>
                 <h2>Transition icon on click</h2>
-                <paper-button on-tap="triggerTransition" data-shape="menu">Switch to menu</paper-button>
-                <paper-button on-tap="triggerTransition" data-shape="more">Switch to more</paper-button>
-                <paper-button on-tap="triggerTransition" data-shape="check">Switch to check</paper-button>
-                <paper-button on-tap="triggerTransition" data-shape="cancel">Switch to cancel</paper-button>
+                <paper-button on-tap="triggerTransition" data-icon="menu">Switch to menu</paper-button>
+                <paper-button on-tap="triggerTransition" data-icon="more-horiz">Switch to more-horiz</paper-button>
+                <paper-button on-tap="triggerTransition" data-icon="check">Switch to check</paper-button>
+                <paper-button on-tap="triggerTransition" data-icon="close">Switch to close</paper-button>
 
                 <h2>Transition icon on hover</h2>
-                <icon-transition on-mouseover="pickShape" shape="plus"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="cancel"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="check"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="menu"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="more"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="more-vert"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="right"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="left"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="up"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="down"></icon-transition>
-
-                <icon-transition on-mouseover="pickShape" shape="right-arrow"></icon-transition>
-                <icon-transition on-mouseover="pickShape" shape="left-arrow"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="add"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="remove"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="close"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="check"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="menu"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="more-horiz"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="more-vert"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="chevron-right"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="chevron-left"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="expand-less"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="expand-more"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="arrow-forward"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="arrow-back"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="filter-list"></icon-transition>
+                <icon-transition on-mouseover="pickIcon" icon="sort"></icon-transition>
 
                 <p>A prototype of Material Design <a href="http://www.google.com/design/spec/animation/delightful-details.html#delightful-details-delightful-details">delightful details</a>.</p>
             </main>
@@ -100,26 +102,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </template>
     <script>
         Polymer({
-            is: 'shape-demo',
+            is: 'icon-demo',
             properties: {
-                shape: {
+                icon: {
                     type: String,
-                    value: 'plus'
+                    value: 'add'
                 }
             },
 
-            pickShape: function (e) {
-                this.shape = e.currentTarget.shape;
+            pickIcon: function (e) {
+                this.icon = e.currentTarget.icon;
             },
             triggerTransition: function (e) {
-                var shape = e.currentTarget.attributes['data-shape'].value;
-                if (!!shape) {
-                    this.shape = shape;
+                var icon = e.currentTarget.attributes['data-icon'].value;
+                if (!!icon) {
+                    this.icon = icon;
                 }
             }
         });
     </script>
 </dom-module>
-<shape-demo></shape-demo>
+<icon-demo></icon-demo>
 </body>
 </html>

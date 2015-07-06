@@ -12,19 +12,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 Example:
 
-    <icon-transition id="icon1" on-mouseover="pickShape" shape="plus" ></icon-transition>
-    <icon-transition id="icon2" on-mouseover="pickShape" shape="check" ></icon-transition>
+    <icon-transition id="icon1" on-mouseover="pickIcon" icon="plus" ></icon-transition>
+    <icon-transition id="icon2" on-mouseover="pickIcon" icon="check" ></icon-transition>
 
     <script>
       Polymer({
         is: 'transition-demo',
-        pickShape: function(e) {
-          this.shape = e.currentTarget.shape;
+        pickIcon: function(e) {
+          this.icon = e.currentTarget.icon;
         }
       });
     </script>
 
-In the above example, we have two `<icon-transition>` icons whose transitions are specified in CSS. Hovering over the icon triggers a transition from one shape to the next.
+In the above example, we have two `<icon-transition>` icons whose transitions are specified in CSS. Hovering over the icon triggers a transition from one icon to the next.
 
 @group Polymer Labs Elements
 @element icon-transition
@@ -37,11 +37,11 @@ In the above example, we have two `<icon-transition>` icons whose transitions ar
 <dom-module id="icon-transition">
     <link rel="stylesheet" href="icon-transition.css">
     <template>
-        <svg id="svg" viewbox="0 0 100 100" stroke$="{{color}}">
-            <g transform="translate(50, 50)">
-                <line x1="-3" y1="0" x2="3" y2="0"></line>
-                <line x1="-3" y1="0" x2="3" y2="0"></line>
-                <line x1="-3" y1="0" x2="3" y2="0"></line>
+        <svg id="svg" viewbox="0 0 24 24" stroke$="{{color}}">
+            <g transform="translate(12, 12)">
+                <line x1="-1" y1="0" x2="1" y2="0"></line>
+                <line x1="-1" y1="0" x2="1" y2="0"></line>
+                <line x1="-1" y1="0" x2="1" y2="0"></line>
             </g>
         </svg>
     </template>
@@ -56,16 +56,16 @@ In the above example, we have two `<icon-transition>` icons whose transitions ar
                     type: String,
                     value: '#000'
                 },
-                shape: {
+                icon: {
                     type: String,
-                    observer: 'shapeChanged'
+                    observer: 'iconChanged'
                 }
             },
 
-            shapeChanged: function() {
+            iconChanged: function() {
                 this._rotate += 180;
 
-                var cl = this.shape;
+                var cl = this.icon;
                 if ((this._rotate % 360) == 180) {
                     cl += ' rotate';
                 }

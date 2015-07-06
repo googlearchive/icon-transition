@@ -8,8 +8,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 */
 icon-transition {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   position: relative;
   line-height: 0;
 }
@@ -29,7 +29,7 @@ svg {
 }
 
 line {
-  stroke-width: 6;
+  stroke-width: 1;
   -webkit-transition: -webkit-transform 0.5s;
   -moz-transition: -moz-transform 0.5s;
   -o-transition: -o-transform 0.5s;
@@ -41,60 +41,68 @@ line {
   transform: translate(0, 0) scale(0.01);
 }
 
-.plus line:nth-child(1) {
-  -webkit-transform: translate(0, 0) scale(12, 1);
-  -moz-transform: translate(0, 0) scale(12, 1);
-  -ms-transform: translate(0, 0) scale(12, 1);
-  -o-transform: translate(0, 0) scale(12, 1);
-  transform: translate(0, 0) scale(12, 1);
+.add line:nth-child(1) {
+  -webkit-transform: translate(0, 0) scale(7, 2);
+  -moz-transform: translate(0, 0) scale(7, 2);
+  -ms-transform: translate(0, 0) scale(7, 2);
+  -o-transform: translate(0, 0) scale(7, 2);
+  transform: translate(0, 0) scale(7, 2);
 }
 
-.plus line:nth-child(3) {
-  -webkit-transform: translate(0, 0) rotate(90deg) scale(12, 1);
-  -moz-transform: translate(0, 0) rotate(90deg) scale(12, 1);
-  -ms-transform: translate(0, 0) rotate(90deg) scale(12, 1);
-  -o-transform: translate(0, 0) rotate(90deg) scale(12, 1);
-  transform: translate(0, 0) rotate(90deg) scale(12, 1);
+.add line:nth-child(3) {
+  -webkit-transform: translate(0, 0) rotate(90deg) scale(7, 2);
+  -moz-transform: translate(0, 0) rotate(90deg) scale(7, 2);
+  -ms-transform: translate(0, 0) rotate(90deg) scale(7, 2);
+  -o-transform: translate(0, 0) rotate(90deg) scale(7, 2);
+  transform: translate(0, 0) rotate(90deg) scale(7, 2);
 }
 
-.cancel line:nth-child(1) {
-  -webkit-transform: translate(0, 0) rotate(135deg) scale(12, 1);
-  -moz-transform: translate(0, 0) rotate(135deg) scale(12, 1);
-  -ms-transform: translate(0, 0) rotate(135deg) scale(12, 1);
-  -o-transform: translate(0, 0) rotate(135deg) scale(12, 1);
-  transform: translate(0, 0) rotate(135deg) scale(12, 1);
+.remove line:nth-child(1) {
+  -webkit-transform: translate(0, 0) scale(7, 2);
+  -moz-transform: translate(0, 0) scale(7, 2);
+  -ms-transform: translate(0, 0) scale(7, 2);
+  -o-transform: translate(0, 0) scale(7, 2);
+  transform: translate(0, 0) scale(7, 2);
 }
 
-.cancel line:nth-child(3) {
-  -webkit-transform: translate(0, 0) rotate(-135deg) scale(12, 1);
-  -moz-transform: translate(0, 0) rotate(-135deg) scale(12, 1);
-  -ms-transform: translate(0, 0) rotate(-135deg) scale(12, 1);
-  -o-transform: translate(0, 0) rotate(-135deg) scale(12, 1);
-  transform: translate(0, 0) rotate(-135deg) scale(12, 1);
+.close line:nth-child(1) {
+  -webkit-transform: translate(0, 0) rotate(135deg) scale(9, 2);
+  -moz-transform: translate(0, 0) rotate(135deg) scale(9, 2);
+  -ms-transform: translate(0, 0) rotate(135deg) scale(9, 2);
+  -o-transform: translate(0, 0) rotate(135deg) scale(9, 2);
+  transform: translate(0, 0) rotate(135deg) scale(9, 2);
+}
+
+.close line:nth-child(3) {
+  -webkit-transform: translate(0, 0) rotate(-135deg) scale(9, 2);
+  -moz-transform: translate(0, 0) rotate(-135deg) scale(9, 2);
+  -ms-transform: translate(0, 0) rotate(-135deg) scale(9, 2);
+  -o-transform: translate(0, 0) rotate(-135deg) scale(9, 2);
+  transform: translate(0, 0) rotate(-135deg) scale(9, 2);
 }
 
 .check line:nth-child(1) {
-  -webkit-transform: translate(-24.7px, 10.5px) rotate(45deg) scale(6, 1);
-  -moz-transform: translate(-24.7px, 10.5px) rotate(45deg) scale(6, 1);
-  -ms-transform: translate(-24.7px, 10.5px) rotate(45deg) scale(6, 1);
-  -o-transform: translate(-24.7px, 10.5px) rotate(45deg) scale(6, 1);
-  transform: translate(-24.7px, 10.5px) rotate(45deg) scale(6, 1);
+  -webkit-transform: translate(-5px, 3.5px) rotate(45deg) scale(4, 2);
+  -moz-transform: translate(-5px, 3.5px) rotate(45deg) scale(4, 2);
+  -ms-transform: translate(-5px, 3.5px) rotate(45deg) scale(4, 2);
+  -o-transform: translate(-5px, 3.5px) rotate(45deg) scale(4, 2);
+  transform: translate(-5px, 3.5px) rotate(45deg) scale(4, 2);
 }
 
 .check line:nth-child(3) {
-  -webkit-transform: translate(11.5px, 0) rotate(-45deg) scale(12, 1);
-  -moz-transform: translate(11.5px, 0) rotate(-45deg) scale(12, 1);
-  -ms-transform: translate(11.5px, 0) rotate(-45deg) scale(12, 1);
-  -o-transform: translate(11.5px, 0) rotate(-45deg) scale(12, 1);
-  transform: translate(11.5px, 0) rotate(-45deg) scale(12, 1);
+  -webkit-transform: translate(2.3px, .3px) rotate(-45deg) scale(8.5, 2);
+  -moz-transform: translate(2.5px, .3px) rotate(-45deg) scale(8.5, 2);
+  -ms-transform: translate(2.3px, .3px) rotate(-45deg) scale(8.5, 2);
+  -o-transform: translate(2.3px, .3px) rotate(-45deg) scale(8.5, 2);
+  transform: translate(2.3px, .3px) rotate(-45deg) scale(8.5, 2);
 }
 
 .check.rotate line:nth-child(1) {
-  -webkit-transform: translate(24.7px, -10.5px) rotate(45deg) scale(6, 1);
-  -moz-transform: translate(24.7px, -10.5px) rotate(45deg) scale(6, 1);
-  -ms-transform: translate(24.7px, -10.5px) rotate(45deg) scale(6, 1);
-  -o-transform: translate(24.7px, -10.5px) rotate(45deg) scale(6, 1);
-  transform: translate(24.7px, -10.5px) rotate(45deg) scale(6, 1);
+  -webkit-transform: translate(5px, -3.5px) rotate(45deg) scale(4, 2);
+  -moz-transform: translate(5px, -3.5px) rotate(45deg) scale(4, 2);
+  -ms-transform: translate(5px, -3.5px) rotate(45deg) scale(4, 2);
+  -o-transform: translate(5px, -3.5px) rotate(45deg) scale(4, 2);
+  transform: translate(5px, -3.5px) rotate(45deg) scale(4, 2);
 }
 
 .check.rotate line:nth-child(3) {
@@ -106,281 +114,369 @@ line {
 }
 
 .menu line:nth-child(1) {
-  -webkit-transform: translate(0, -23px) scale(12, 1);
-  -moz-transform: translate(0, -23px) scale(12, 1);
-  -ms-transform: translate(0, -23px) scale(12, 1);
-  -o-transform: translate(0, -23px) scale(12, 1);
-  transform: translate(0, -23px) scale(12, 1);
+  -webkit-transform: translate(0, -5px) scale(9, 2);
+  -moz-transform: translate(0, -5px) scale(9, 2);
+  -ms-transform: translate(0, -5px) scale(9, 2);
+  -o-transform: translate(0, -5px) scale(9, 2);
+  transform: translate(0, -5px) scale(9, 2);
 }
 
 .menu line:nth-child(2) {
-  -webkit-transform: translate(0, 0) scale(12, 1);
-  -moz-transform: translate(0, 0) scale(12, 1);
-  -ms-transform: translate(0, 0) scale(12, 1);
-  -o-transform: translate(0, 0) scale(12, 1);
-  transform: translate(0, 0) scale(12, 1);
+  -webkit-transform: translate(0, 0) scale(9, 2);
+  -moz-transform: translate(0, 0) scale(9, 2);
+  -ms-transform: translate(0, 0) scale(9, 2);
+  -o-transform: translate(0, 0) scale(9, 2);
+  transform: translate(0, 0) scale(9, 2);
 }
 
 .menu line:nth-child(3) {
-  -webkit-transform: translate(0, 23px) scale(12, 1);
-  -moz-transform: translate(0, 23px) scale(12, 1);
-  -ms-transform: translate(0, 23px) scale(12, 1);
-  -o-transform: translate(0, 23px) scale(12, 1);
-  transform: translate(0, 23px) scale(12, 1);
+  -webkit-transform: translate(0, 5px) scale(9, 2);
+  -moz-transform: translate(0, 5px) scale(9, 2);
+  -ms-transform: translate(0, 5px) scale(9, 2);
+  -o-transform: translate(0, 5px) scale(9, 2);
+  transform: translate(0, 5px) scale(9, 2);
 }
 
-.more line:nth-child(1) {
-  -webkit-transform: translate(-26px, 0) scale(2, 2);
-  -moz-transform: translate(-26px, 0) scale(2, 2);
-  -ms-transform: translate(-26px, 0) scale(2, 2);
-  -o-transform: translate(-26px, 0) scale(2, 2);
-  transform: translate(-26px, 0) scale(2, 2);
+.more-horiz line:nth-child(1) {
+  -webkit-transform: translate(-6px, 0) scale(1.4, 2.8);
+  -moz-transform: translate(-6px, 0) scale(1.4, 2.8);
+  -ms-transform: translate(-6px, 0) scale(1.4, 2.8);
+  -o-transform: translate(-6px, 0) scale(1.4, 2.8);
+  transform: translate(-6px, 0) scale(1.4, 2.8);
 }
 
-.more line:nth-child(2) {
-  -webkit-transform: translate(0, 0) scale(2, 2);
-  -moz-transform: translate(0, 0) scale(2, 2);
-  -ms-transform: translate(0, 0) scale(2, 2);
-  -o-transform: translate(0, 0) scale(2, 2);
-  transform: translate(0, 0) scale(2, 2);
+.more-horiz line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(1.4, 2.8);
+  -moz-transform: translate(0, 0) scale(1.4, 2.8);
+  -ms-transform: translate(0, 0) scale(1.4, 2.8);
+  -o-transform: translate(0, 0) scale(1.4, 2.8);
+  transform: translate(0, 0) scale(1.4, 2.8);
 }
 
-.more line:nth-child(3) {
-  -webkit-transform: translate(26px, 0) scale(2, 2);
-  -moz-transform: translate(26px, 0) scale(2, 2);
-  -ms-transform: translate(26px, 0) scale(2, 2);
-  -o-transform: translate(26px, 0) scale(2, 2);
-  transform: translate(26px, 0) scale(2, 2);
+.more-horiz line:nth-child(3) {
+  -webkit-transform: translate(6px, 0) scale(1.4, 2.8);
+  -moz-transform: translate(6px, 0) scale(1.4, 2.8);
+  -ms-transform: translate(6px, 0) scale(1.4, 2.8);
+  -o-transform: translate(6px, 0) scale(1.4, 2.8);
+  transform: translate(6px, 0) scale(1.4, 2.8);
 }
 
 .more-vert line:nth-child(1) {
-  -webkit-transform: translate(0, -26px) scale(2, 2);
-  -moz-transform: translate(0, -26px) scale(2, 2);
-  -ms-transform: translate(0, -26px) scale(2, 2);
-  -o-transform: translate(0, -26px) scale(2, 2);
-  transform: translate(0, -26px) scale(2, 2);
+  -webkit-transform: translate(0, -6px) scale(1.4, 2.8);
+  -moz-transform: translate(0, -6px) scale(1.4, 2.8);
+  -ms-transform: translate(0, -6px) scale(1.4, 2.8);
+  -o-transform: translate(0, -6px) scale(1.4, 2.8);
+  transform: translate(0, -6px) scale(1.4, 2.8);
 }
 
 .more-vert line:nth-child(2) {
-  -webkit-transform: translate(0, 0) scale(2, 2);
-  -moz-transform: translate(0, 0) scale(2, 2);
-  -ms-transform: translate(0, 0) scale(2, 2);
-  -o-transform: translate(0, 0) scale(2, 2);
-  transform: translate(0, 0) scale(2, 2);
+  -webkit-transform: translate(0, 0) scale(1.4, 2.8);
+  -moz-transform: translate(0, 0) scale(1.4, 2.8);
+  -ms-transform: translate(0, 0) scale(1.4, 2.8);
+  -o-transform: translate(0, 0) scale(1.4, 2.8);
+  transform: translate(0, 0) scale(1.4, 2.8);
 }
 
 .more-vert line:nth-child(3) {
-  -webkit-transform: translate(0, 26px) scale(2, 2);
-  -moz-transform: translate(0, 26px) scale(2, 2);
-  -ms-transform: translate(0, 26px) scale(2, 2);
-  -o-transform: translate(0, 26px) scale(2, 2);
-  transform: translate(0, 26px) scale(2, 2);
+  -webkit-transform: translate(0, 6px) scale(1.4, 2.8);
+  -moz-transform: translate(0, 6px) scale(1.4, 2.8);
+  -ms-transform: translate(0, 6px) scale(1.4, 2.8);
+  -o-transform: translate(0, 6px) scale(1.4, 2.8);
+  transform: translate(0, 6px) scale(1.4, 2.8);
 }
 
-.right line:nth-child(1) {
-  -webkit-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
-  -o-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
-  transform: translate(0, -17px) rotate(45deg) scale(9, 1);
+.chevron-right line:nth-child(1) {
+  -webkit-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  -ms-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  -o-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
 }
 
-.right line:nth-child(3) {
-  -webkit-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
-  transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
+.chevron-right line:nth-child(3) {
+  -webkit-transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
+  -moz-transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
+  -ms-transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
+  -o-transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
+  transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
 }
 
-.rotate.right line:nth-child(1) {
-  -webkit-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
+.rotate.chevron-right line:nth-child(1) {
+  -webkit-transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
+  -moz-transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
+  -ms-transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
+  -o-transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
+  transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
 }
 
-.rotate.right line:nth-child(3) {
-  -webkit-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -o-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  transform: translate(0, 17px) rotate(45deg) scale(9, 1);
+.rotate.chevron-right line:nth-child(3) {
+  -webkit-transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
+  -ms-transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
+  -o-transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
+  transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
 }
 
-.right-arrow line:nth-child(1) {
-  -webkit-transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
-  -o-transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
-  transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
+.arrow-forward line:nth-child(1) {
+  -webkit-transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
+  -moz-transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
+  -ms-transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
+  -o-transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
+  transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
 }
 
-.right-arrow line:nth-child(2) {
-  -webkit-transform: translate(0, 0) scale(12, 1);
-  -moz-transform: translate(0, 0) scale(12, 1);
-  -ms-transform: translate(0, 0) scale(12, 1);
-  -o-transform: translate(0, 0) scale(12, 1);
-  transform: translate(0, 0) scale(12, 1);
+.arrow-forward line:nth-child(2) {
+  -webkit-transform: translate(-0.5px, 0) scale(7.5, 2);
+  -moz-transform: translate(-0.5px, 0) scale(7.5, 2);
+  -ms-transform: translate(-0.5px, 0) scale(7.5, 2);
+  -o-transform: translate(-0.5px, 0) scale(7.5, 2);
+  transform: translate(-0.5px, 0) scale(7.5, 2);
 }
 
-.right-arrow line:nth-child(3) {
-  -webkit-transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
-  transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
+.arrow-forward line:nth-child(3) {
+  -webkit-transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -moz-transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -ms-transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -o-transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
 }
 
-.rotate.right-arrow line:nth-child(1) {
-  -webkit-transform: translate(-17px, -17px) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(-17px, -17px) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(-17px, -17px) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(-17px, -17px) rotate(-45deg) scale(9, 1);
-  transform: translate(-17px, -17px) rotate(-45deg) scale(9, 1);
+.rotate.arrow-forward line:nth-child(1) {
+  -webkit-transform: translate(-17px, -17px) rotate(-45deg) scale(5.75, 2);
+  -moz-transform: translate(-17px, -17px) rotate(-45deg) scale(5.75, 2);
+  -ms-transform: translate(-17px, -17px) rotate(-45deg) scale(5.75, 2);
+  -o-transform: translate(-17px, -17px) rotate(-45deg) scale(5.75, 2);
+  transform: translate(-17px, -17px) rotate(-45deg) scale(5.75, 2);
 }
 
-.rotate.right-arrow line:nth-child(3) {
-  -webkit-transform: translate(-17px, 17px) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(-17px, 17px) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(-17px, 17px) rotate(45deg) scale(9, 1);
-  -o-transform: translate(-17px, 17px) rotate(45deg) scale(9, 1);
-  transform: translate(-17px, 17px) rotate(45deg) scale(9, 1);
+.rotate.arrow-forward line:nth-child(3) {
+  -webkit-transform: translate(-17px, 17px) rotate(45deg) scale(5.75, 2);
+  -moz-transform: translate(-17px, 17px) rotate(45deg) scale(5.75, 2);
+  -ms-transform: translate(-17px, 17px) rotate(45deg) scale(5.75, 2);
+  -o-transform: translate(-17px, 17px) rotate(45deg) scale(5.75, 2);
+  transform: translate(-17px, 17px) rotate(45deg) scale(5.75, 2);
 }
 
-.left line:nth-child(1) {
-  -webkit-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
+.chevron-left line:nth-child(1) {
+  -webkit-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
+  -ms-transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
+  -o-transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
+  transform: translate(0.3px, -2.3px) rotate(-45deg) scale(4.25, 2);
 }
 
-.left line:nth-child(3) {
-  -webkit-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -o-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  transform: translate(0, 17px) rotate(45deg) scale(9, 1);
+.chevron-left line:nth-child(3) {
+  -webkit-transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
+  -ms-transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
+  -o-transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
+  transform: translate(0.3px, 2.3px) rotate(45deg) scale(4.25, 2);
 }
 
-.rotate.left line:nth-child(1) {
-  -webkit-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
-  -o-transform: translate(0, -17px) rotate(45deg) scale(9, 1);
-  transform: translate(0, -17px) rotate(45deg) scale(9, 1);
+.rotate.chevron-left line:nth-child(1) {
+  -webkit-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  -ms-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  -o-transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
+  transform: translate(0.3px, -2.3px) rotate(45deg) scale(4.25, 2);
 }
 
-.rotate.left line:nth-child(3) {
-  -webkit-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
-  transform: translate(0, 17px) rotate(-45deg) scale(9, 1);
+.rotate.chevron-left line:nth-child(3) {
+  -webkit-transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
+  -moz-transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
+  -ms-transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
+  -o-transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
+  transform: translate(0.3px, 2.3px) rotate(-45deg) scale(4.25, 2);
 }
 
-.left-arrow line:nth-child(1) {
-  -webkit-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(0, -17px) rotate(-45deg) scale(9, 1);
-  transform: translate(-17px, -17px) rotate(-45deg) scale(9, 1);
+.arrow-back line:nth-child(1) {
+  -webkit-transform: translate(-3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -moz-transform: translate(-3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -ms-transform: translate(-3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -o-transform: translate(-3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  transform: translate(-3.3px, -3.3px) rotate(-45deg) scale(5.75, 2);
 }
 
-.left-arrow line:nth-child(2) {
-  -webkit-transform: translate(0, 0) scale(12, 1);
-  -moz-transform: translate(0, 0) scale(12, 1);
-  -ms-transform: translate(0, 0) scale(12, 1);
-  -o-transform: translate(0, 0) scale(12, 1);
-  transform: translate(0, 0) scale(12, 1);
+.arrow-back line:nth-child(2) {
+  -webkit-transform: translate(0.25px, 0) scale(7.5, 2);
+  -moz-transform: translate(0.25px, 0) scale(7.5, 2);
+  -ms-transform: translate(0.25px, 0) scale(7.5, 2);
+  -o-transform: translate(0.25px, 0) scale(7.5, 2);
+  transform: translate(0.25px, 0) scale(7.5, 2);
 }
 
-.left-arrow line:nth-child(3) {
-  -webkit-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  -o-transform: translate(0, 17px) rotate(45deg) scale(9, 1);
-  transform: translate(-17px, 17px) rotate(45deg) scale(9, 1);
+.arrow-back line:nth-child(3) {
+  -webkit-transform: translate(-3.3px, 3.3px) rotate(45deg) scale(5.75, 2);
+  -moz-transform: translate(-3.3px, 3.3px) rotate(45deg) scale(5.75, 2);
+  -ms-transform: translate(-3.3px, 3.3px) rotate(45deg) scale(5.75, 2);
+  -o-transform: translate(-3.3px, 3.3px) rotate(45deg) scale(5.75, 2);
+  transform: translate(-3.3px, 3.3px) rotate(45deg) scale(5.75, 2);
 }
 
-.rotate.left-arrow line:nth-child(1) {
-  -webkit-transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
-  -o-transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
-  transform: translate(17px, -17px) rotate(45deg) scale(9, 1);
+.rotate.arrow-back line:nth-child(1) {
+  -webkit-transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
+  -moz-transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
+  -ms-transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
+  -o-transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
+  transform: translate(3.3px, -3.3px) rotate(45deg) scale(5.75, 2);
 }
 
-.rotate.left-arrow line:nth-child(3) {
-  -webkit-transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
-  transform: translate(17px, 17px) rotate(-45deg) scale(9, 1);
+.rotate.arrow-back line:nth-child(3) {
+  -webkit-transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -moz-transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -ms-transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  -o-transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
+  transform: translate(3.3px, 3.3px) rotate(-45deg) scale(5.75, 2);
 }
 
-.up line:nth-child(1) {
-  -webkit-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
-  transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
+.expand-less line:nth-child(1) {
+  -webkit-transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -moz-transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -ms-transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -o-transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
 }
 
-.up line:nth-child(3) {
-  -webkit-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
-  -o-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
-  transform: translate(17px, 0) rotate(45deg) scale(9, 1);
+.expand-less line:nth-child(3) {
+  -webkit-transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -ms-transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -o-transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
 }
 
-.rotate.up line:nth-child(1) {
-  -webkit-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
-  -o-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
-  transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
+.rotate.expand-less line:nth-child(1) {
+  -webkit-transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -ms-transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -o-transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
 }
 
-.rotate.up line:nth-child(3) {
-  -webkit-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
-  transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
+.rotate.expand-less line:nth-child(3) {
+  -webkit-transform: translate(2.3px, 0) rotate(-45deg) scale(4.25, 2);
+  -moz-transform: translate(2.3px, 0) rotate(-45deg) scale(4.25, 2);
+  -ms-transform: translate(2.3px, 0) rotate(-45deg) scale(4.25, 2);
+  -o-transform: translate(2.3px, 0) rotate(-45deg) scale(4.25, 2);
+  transform: translate(2.3px, 0) rotate(-45deg) scale(4.25, 2);
 }
 
-.down line:nth-child(1) {
-  -webkit-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
-  -o-transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
-  transform: translate(-17px, 0) rotate(45deg) scale(9, 1);
+.expand-more line:nth-child(1) {
+  -webkit-transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -ms-transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -o-transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  transform: translate(-2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
 }
 
-.down line:nth-child(3) {
-  -webkit-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
-  transform: translate(17px, 0) rotate(-45deg) scale(9, 1);
+.expand-more line:nth-child(3) {
+  -webkit-transform: translate(2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -moz-transform: translate(2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -ms-transform: translate(2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -o-transform: translate(2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  transform: translate(2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
 }
 
-.rotate.down line:nth-child(1) {
-  -webkit-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
-  -moz-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
-  -ms-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
-  -o-transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
-  transform: translate(-17px, 0) rotate(-45deg) scale(9, 1);
+.rotate.expand-more line:nth-child(1) {
+  -webkit-transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -moz-transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -ms-transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  -o-transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
+  transform: translate(-2.3px, 0.3px) rotate(-45deg) scale(4.25, 2);
 }
 
-.rotate.down line:nth-child(3) {
-  -webkit-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
-  -moz-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
-  -ms-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
-  -o-transform: translate(17px, 0) rotate(45deg) scale(9, 1);
-  transform: translate(17px, 0) rotate(45deg) scale(9, 1);
+.rotate.expand-more line:nth-child(3) {
+  -webkit-transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -moz-transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -ms-transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  -o-transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+  transform: translate(2.3px, 0.3px) rotate(45deg) scale(4.25, 2);
+}
+
+.filter-list line:nth-child(1) {
+  -webkit-transform: translate(0, -6px) scale(9, 2);
+  -moz-transform: translate(0, -6px) scale(9, 2);
+  -ms-transform: translate(0, -6px) scale(9, 2);
+  -o-transform: translate(0, -6px) scale(9, 2);
+  transform: translate(0, -6px) scale(9, 2);
+}
+
+.filter-list line:nth-child(2) {
+  -webkit-transform: translate(0, 0) scale(6, 2);
+  -moz-transform: translate(0, 0) scale(6, 2);
+  -ms-transform: translate(0, 0) scale(6, 2);
+  -o-transform: translate(0, 0) scale(6, 2);
+  transform: translate(0, 0) scale(6, 2);
+}
+
+.filter-list line:nth-child(3) {
+  -webkit-transform: translate(0, 6px) scale(2, 2);
+  -moz-transform: translate(0, 6px) scale(2, 2);
+  -ms-transform: translate(0, 6px) scale(2, 2);
+  -o-transform: translate(0, 6px) scale(2, 2);
+  transform: translate(0, 6px) scale(2, 2);
+}
+
+.filter-list.rotate line:nth-child(1) {
+  -webkit-transform: translate(0, -6px) scale(2, 2);
+  -moz-transform: translate(0, -6px) scale(2, 2);
+  -ms-transform: translate(0, -6px) scale(2, 2);
+  -o-transform: translate(0, -6px) scale(2, 2);
+  transform: translate(0, -6px) scale(2, 2);
+}
+
+.filter-list.rotate line:nth-child(3) {
+  -webkit-transform: translate(0, 6px) scale(2, 2);
+  -moz-transform: translate(0, 6px) scale(2, 2);
+  -ms-transform: translate(0, 6px) scale(2, 2);
+  -o-transform: translate(0, 6px) scale(2, 2);
+  transform: translate(0, 6px) scale(2, 2);
+}
+
+.sort line:nth-child(1) {
+  -webkit-transform: translate(0, -6px) scale(9, 2);
+  -moz-transform: translate(0, -6px) scale(9, 2);
+  -ms-transform: translate(0, -6px) scale(9, 2);
+  -o-transform: translate(0, -6px) scale(9, 2);
+  transform: translate(0, -6px) scale(9, 2);
+}
+
+.sort line:nth-child(2) {
+  -webkit-transform: translate(-3px, 0) scale(6, 2);
+  -moz-transform: translate(-3px, 0) scale(6, 2);
+  -ms-transform: translate(-3px, 0) scale(6, 2);
+  -o-transform: translate(-3px, 0) scale(6, 2);
+  transform: translate(-3px, 0) scale(6, 2);
+}
+
+.sort line:nth-child(3) {
+  -webkit-transform: translate(-6px, 6px) scale(3, 2);
+  -moz-transform: translate(-6px, 6px) scale(3, 2);
+  -ms-transform: translate(-6px, 6px) scale(3, 2);
+  -o-transform: translate(-6px, 6px) scale(3, 2);
+  transform: translate(-6px, 6px) scale(3, 2);
+}
+
+.sort.rotate line:nth-child(1) {
+  -webkit-transform: translate(0, -6px) scale(3, 2);
+  -moz-transform: translate(0, -6px) scale(3, 2);
+  -ms-transform: translate(0, -6px) scale(3, 2);
+  -o-transform: translate(0, -6px) scale(3, 2);
+  transform: translate(0, -6px) scale(3, 2);
+}
+
+.sort.rotate line:nth-child(2) {
+  -webkit-transform: translate(-3px, 0) scale(6, 2);
+  -moz-transform: translate(-3px, 0) scale(6, 2);
+  -ms-transform: translate(-3px, 0) scale(6, 2);
+  -o-transform: translate(-3px, 0) scale(6, 2);
+  transform: translate(-3px, 0) scale(6, 2);
+}
+
+.sort.rotate line:nth-child(3) {
+  -webkit-transform: translate(-6px, 6px) scale(9, 2);
+  -moz-transform: translate(-6px, 6px) scale(9, 2);
+  -ms-transform: translate(-6px, 6px) scale(9, 2);
+  -o-transform: translate(-6px, 6px) scale(9, 2);
+  transform: translate(-6px, 6px) scale(9, 2);
 }
