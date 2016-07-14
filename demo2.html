@@ -1,0 +1,120 @@
+<!doctype html>
+<!--
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+<head>
+    <title>icon-transition</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <link rel="import" href="icon-transition.html">
+    <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        #hero {
+            display: block;
+            padding: 20px;
+        }
+
+        icon-transition {
+            display: inline-block;
+        }
+
+        core-toolbar {
+            color: #fff;
+            background-color: #009688;
+        }
+
+        paper-button {
+            color: #4285f4;
+        }
+
+        h2 {
+            color: #666;
+        }
+
+        main {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body unresolved>
+<template is="dom-bind" id="app">
+    <div>
+        <paper-toolbar>
+            <icon-transition color="#fff" id="hero" icon="{{icon}}"></icon-transition>
+            <span flex>Toolbar</span>
+            <paper-icon-button icon="refresh"></paper-icon-button>
+            <paper-icon-button icon="add"></paper-icon-button>
+        </paper-toolbar>
+
+        <main>
+            <h2>Transition icon on click</h2>
+            <paper-button on-tap="triggerTransition" data-icon="menu">Switch to menu</paper-button>
+            <paper-button on-tap="triggerTransition" data-icon="more-horiz">Switch to more-horiz</paper-button>
+            <paper-button on-tap="triggerTransition" data-icon="check">Switch to check</paper-button>
+            <paper-button on-tap="triggerTransition" data-icon="close">Switch to close</paper-button>
+
+            <h2>Transition icon on hover</h2>
+            <icon-transition on-mouseover="pickIcon" icon="add"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="remove"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="close"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="check"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="menu"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="more-horiz"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="more-vert"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="chevron-right"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="chevron-left"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="expand-less"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="expand-more"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="arrow-forward"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="arrow-back"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="filter-list"></icon-transition>
+            <icon-transition on-mouseover="pickIcon" icon="sort"></icon-transition>
+
+            <p>A prototype of Material Design <a href="http://www.google.com/design/spec/animation/delightful-details.html#delightful-details-delightful-details">delightful details</a>.</p>
+        </main>
+    </div>
+</template>
+<script>
+    (function (document) {
+        var app = document.querySelector('#app');
+        window.addEventListener('WebComponentsReady', function () {
+            app.icon = 'add';
+
+            app.pickIcon = function (e) {
+                this.icon = e.currentTarget.icon;
+            };
+
+            app.triggerTransition = function (e) {
+                var icon = e.currentTarget.attributes['data-icon'].value;
+                if (!!icon) {
+                    this.icon = icon;
+                }
+            };
+        });
+    })(document);
+</script>
+</body>
+</html>
