@@ -15,7 +15,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
     <link rel="import" href="icon-transition.html">
     <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
@@ -45,7 +45,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             display: inline-block;
         }
 
-        core-toolbar {
+        paper-toolbar {
             color: #fff;
             background-color: #009688;
         }
@@ -65,10 +65,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <template>
         <div>
             <paper-toolbar>
-                <icon-transition color="#fff" id="hero" icon="{{icon}}"></icon-transition>
-                <span flex>Toolbar</span>
-                <paper-icon-button icon="refresh"></paper-icon-button>
-                <paper-icon-button icon="add"></paper-icon-button>
+                <icon-transition slot="top" color="#fff" id="hero" icon="{{icon}}"></icon-transition>
+                <span flex slot="top">Toolbar</span>
+                <paper-icon-button slot="top" icon="refresh"></paper-icon-button>
+                <paper-icon-button slot="top" icon="add"></paper-icon-button>
             </paper-toolbar>
 
             <main>
